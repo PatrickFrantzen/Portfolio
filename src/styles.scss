@@ -1,6 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
-@import url(src\fonts.css);
+@import '/src/fonts.css';
 
 body {
+    margin: 0;
     font-family: 'Poppins';
+    color: white;
 }
+
+.f-size-58 {
+    font-size: 58px;
+}
+
+.f-size-64 {
+    font-size: 64px;
+}
+
+.f-size-90 {
+    font-size: 90px;
+}
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,0 +1,36 @@
+.photo-container {
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    background-color: #141D2F;
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins';
+
+    p {
+        margin:0,
+    }
+}
+
+.text-container {
+    position: absolute;
+    top: 200px;
+    right: 75px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.vertical {
+    font-weight: 400;
+    padding-top: 13px;
+    writing-mode:vertical-rl;
+    transform: rotate(180deg);
+}
+
+.grid {
+    position: absolute;
+    top: 200px;
+    right: 75px;
+    height: 250px;
+    width: 250px;
+}
