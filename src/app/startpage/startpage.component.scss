@@ -12,6 +12,32 @@
     }
 }
 
+.introducing-box {
+    display: flex;
+    align-items: center;
+}
+
+.shadow-photo-section{
+    width: 650px;
+}
+
+.portrait {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    height: 690px;
+    width: 555px;
+}
+
+.vector {
+    height: 350px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
 .text-container {
     position: absolute;
     top: 200px;
@@ -27,10 +53,6 @@
     transform: rotate(180deg);
 }
 
-.grid {
-    position: absolute;
-    top: 200px;
-    right: 75px;
-    height: 250px;
-    width: 250px;
+app-introducing {
+    z-index: 1;
 }
