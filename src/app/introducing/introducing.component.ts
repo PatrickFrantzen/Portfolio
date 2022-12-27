@@ -8,6 +8,7 @@ export interface Tile {
   size: number;
   writingMode: string;
   transform: any;
+  width: number;
 }
 
 @Component({
@@ -17,9 +18,9 @@ export interface Tile {
 })
 export class IntroducingComponent {
   tiles: Tile[] = [
-    {text: 'I am', cols: 1, rows: 2, color: 'transparent', size: 60, writingMode: 'vertical-rl', transform: 'rotate(180deg)'},
-    {text: 'Patrick Frantzen', cols: 2, rows: 1, color: 'transparent', size: 60, writingMode: 'unset', transform: 'unset'},
-    {text: 'FRONTEND DEVELOPER', cols: 2, rows: 1, color: 'transparent', size: 60, writingMode: 'unset',transform: 'unset'},
+    {text: 'I am', cols: 1, rows: 2, color: 'transparent', size: 64, writingMode: 'vertical-rl', transform: 'rotate(180deg)', width: 20},
+    {text: 'Patrick Frantzen', cols: 2, rows: 1, color: 'transparent', size: 90, writingMode: 'unset', transform: 'unset', width: 80},
+    {text: 'FRONTEND DEVELOPER', cols: 2, rows: 1, color: 'transparent', size: 58, writingMode: 'unset',transform: 'unset', width: 80},
   ]
 }
 //#141D2F

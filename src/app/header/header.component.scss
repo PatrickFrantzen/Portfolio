@@ -1,0 +1,25 @@
+.header {
+    position: sticky;
+    top: 0;
+    height: 50px;
+    background-color: #141D2F;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 25px;
+    padding-left: 100px;
+    padding-right: 100px;
+    z-index: 1;
+
+    span {
+        margin-left: 50px;
+        font-size: 32px;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+        margin-right: 50px;
+        font-size: 23px;
+    }
+}
