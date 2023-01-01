@@ -3,8 +3,6 @@
     width: 100vw;
     max-width: 100%;
     background-color: #141D2F;
-    display: flex;
-    align-items: start;
     p {
         margin:0,
     }
@@ -14,6 +12,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 
@@ -59,7 +59,7 @@
     justify-content: space-evenly;
     height: 100%;
     margin-left: 40px;
-    margin-right: 125px;
+    
 }
 
 .vertical {
@@ -86,11 +86,10 @@
         right: 0;
         display: flex;
         flex-direction: column;
-        margin-right: 50px;
+        margin-right: 100px;
+        transform: rotate(180deg);
 
-        img {
-            transform: rotate(180deg);
-        }
+       
     }
 
     .line {
@@ -105,12 +104,12 @@
     }
 }
 
-.vector {
+/*.vector {
     height: 250px;
     width: 100%;
     position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
-}
+}*/
 
