@@ -36,9 +36,14 @@ $portfolio-theme: mat.define-light-theme((
 /* You can add global styles to this file, and also import other style files */
 @import '/src/fonts.css';
 
+@font-face {
+  font-family: 'poppins';
+  src: url('./assets/fonts/poppins/Poppins-Black.ttf') format('trueTyoe');
+}
+
 body {
     margin: 0;
-    font-family: 'Poppins';
+    font-family: 'poppins'!important;
     color: white;
     background-color: #141D2F;
 }
@@ -55,9 +60,3 @@ body {
     font-size: 90px;
 }
 
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -16,16 +16,12 @@
     margin-right: 100px;
 }
 
-
 .portrait {
     position: absolute;
-    top: 80px;
+    top: -30px;
     left: 100px;
     height: 120%;
-    overflow: hidden;
 }
-
-
 
 .text {
     display: flex;
@@ -38,6 +34,7 @@
         color: white;
         font-weight: 400;
         font-size: 20px;
+        z-index: 0;
 
         &:hover {
             width: 175px;
@@ -73,6 +70,7 @@
     position: absolute;
     bottom: 15px;
     display: flex;
+    z-index: 1;
     justify-content: space-between;
 
     .social-media-left {
@@ -104,12 +102,5 @@
     }
 }
 
-/*.vector {
-    height: 250px;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}*/
+
 

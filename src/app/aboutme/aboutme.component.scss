@@ -1,0 +1,61 @@
+.vector {
+    height: 1000px;
+    width: 100%;
+    position: absolute;
+    top: 480px;
+}
+
+.shadow-container {
+    position: absolute;
+    top: 750px;
+    right: 0;
+    overflow: hidden;
+}
+
+.purple-shadow {
+    position: relative;
+    right: -55%;
+    overflow: hidden;
+}
+
+.aboutme-container {
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    margin-left: 100px;
+    margin-right: 100px;
+
+    .aboutme-text {
+        width: 50%;
+
+        h1 {
+            font-size: 90px;
+            font-weight: 700;
+            margin-bottom: 50px;
+        }
+    }
+}
+
+.text {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.container-text {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    img {
+        margin-right: 30px;
+    }
+}
+
+
+.aboutme-picture {
+    width: 50%;
+
+    img{
+        height: 250px;
+    }
+}

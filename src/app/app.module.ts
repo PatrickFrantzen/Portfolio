@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {IntroducingComponent} from './introducing/introducing.component';
 import { HeaderComponent } from './header/header.component';
 import {MatButtonModule} from '@angular/material/button';
+import { AboutmeComponent } from './aboutme/aboutme.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import {MatButtonModule} from '@angular/material/button';
     StartpageComponent,
     IntroducingComponent,
     HeaderComponent,
+    AboutmeComponent,
   ],
   imports: [
     BrowserModule,
