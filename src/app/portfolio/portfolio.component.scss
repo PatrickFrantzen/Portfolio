@@ -1,0 +1,143 @@
+/*.portfolio-head {
+    position: relative;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+
+    h1 {
+        font-size: 90px;
+        width: 350px;
+    }
+}
+
+.line {
+        border: 2px solid #9747FF;
+        height: 1px;
+        background-color: #9747FF;
+        border-radius: 10px;
+    }
+
+    .long {
+        position: absolute;
+        right: 0;
+        width: 38%;
+    }
+
+    .short {
+        position: absolute;
+        left: 550px;
+        width: 10%;
+    }*/
+
+.portfolio-head {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+
+    h1 {
+        font-size: 90px;
+        width: 33%;
+        text-align: center;
+    }
+
+    .line {
+        border: 2px solid #9747FF;
+        height: 1px;
+        background-color: #9747FF;
+        border-radius: 10px;
+    }
+
+    .long {
+        width: 33%;
+    }
+
+    .short {
+        width: 10%;
+    }
+}
+
+.portfolio-text {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-area {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 100px;
+    margin-right: 100px;
+    z-index: 1;
+}
+
+.project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 500px;
+        height: 500px;
+    }
+}
+
+.project-details {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn {
+    font-size: 23px;
+    width: 166px;
+    height: 58px;
+    gap: 10px;
+    padding: 15px 30px;
+    color: white !important;
+    border-radius: 10px !important;
+
+    &:hover {
+        background-color: #70E61C !important;
+    }
+}
+
+.live {
+    background-color: #9747FF !important;
+}
+
+.git {
+    margin-left: 50px;
+    background-color: transparent !important;
+    border: 1px solid #70E61C;
+}
+
+.purple-shadow-container {
+    position: absolute;
+    top: 3600px;
+    overflow: hidden;
+}
+
+.purple-shadow {
+    position: relative;
+    left: -100px;
+    overflow: hidden;
+}
+
+.green-shadow-container {
+    position: absolute;
+    top: 4000px;
+    right: 0;
+    overflow: hidden;
+}
+
+.green-shadow {
+    position: relative;
+    right: -525px;
+    overflow: hidden;
+    transform: rotate(80deg);
+}

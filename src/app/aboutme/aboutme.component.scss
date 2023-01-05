@@ -1,10 +1,3 @@
-.vector {
-    height: 1000px;
-    width: 100%;
-    position: absolute;
-    top: 480px;
-}
-
 .shadow-container {
     position: absolute;
     top: 750px;
@@ -19,13 +12,12 @@
 }
 
 .aboutme-container {
-    position: absolute;
     display: flex;
-    z-index: 1;
     margin-left: 100px;
-    margin-right: 100px;
+    margin-bottom: 200px;
 
     .aboutme-text {
+        z-index: 1;
         width: 50%;
 
         h1 {
@@ -53,9 +45,24 @@
 
 
 .aboutme-picture {
+    z-index: 1;
     width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 200px;
 
-    img{
-        height: 250px;
+    img {
+        height: 450px;
+        width: 450px;
+        object-fit: cover;
+        border: 4px solid #70E61C;
+        border-radius: 100%;
+    }
+
+    hr {
+        width: 100%;
+        background-color: #70E61C;
+        border: 2px solid #70E61C;
     }
 }

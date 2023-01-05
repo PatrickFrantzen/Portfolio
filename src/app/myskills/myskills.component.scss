@@ -1,0 +1,87 @@
+.myskills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25px;
+    margin-right: 100px;
+    margin-bottom: 200px;
+
+    h1 {
+        font-size: 90px
+    }
+
+    .skills {
+        width: 55%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .skill {
+            width: 75px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-left: 75px;
+            margin-right: 75px;
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+    }
+
+    .myskills-text {
+        position: relative;
+        width: 45%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        span {
+            margin-bottom: 50px;
+        }
+
+        button {
+            position: absolute;
+            top: 125px;
+            padding: 25px 30px 25px 30px;
+            background-color: #70E61C;
+            color: white;
+            font-weight: 400;
+            font-size: 20px;
+            z-index: 1;
+    
+            &:hover {
+                width: 220px;
+                height: 65px;
+                background-color: #9747FF;
+            }
+        }
+
+        .line {
+            position: absolute;
+            top: 0;
+            right: -100px;
+            border: 2px solid #9747FF;
+            height: 1px;
+            width: 100px;
+            background-color: #9747FF;
+            border-radius: 10px;
+        }
+    }
+}
+
+.shadow-container {
+    position: absolute;
+    top: 1850px;
+    overflow: hidden;
+}
+
+.green-shadow {
+    position: relative;
+    transform:scaleY(-1) ;
+    left: -60%;
+    overflow: hidden;
+}

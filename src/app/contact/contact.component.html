@@ -1,0 +1,45 @@
+<div class="contact-head">
+    <div class="line"></div>
+    <span class="f-size-90">Contact</span>
+</div>
+
+<div class="contact-area">
+    <div class="contact-text">
+        <span [ngStyle]="{'font-size': '32px', 'margin-bottom': '25px'}">Got a problem to solve?</span>
+        <span [ngStyle]="{'margin-bottom': '25px'}"> Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to you
+            projects with my work.</span>
+        <span>Need a Frontend developer? <b>Contact me!</b></span>
+    </div>
+
+
+    <div>
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+            <input class="contactform" [ngStyle]="{'height':'50px'}" type="text" id="fullname" name="fullname" formControlName="fullname" placeholder="Your name">
+            <div *ngIf="!fullname?.valid && fullname?.touched">
+                <div [ngStyle]="{'color': 'red'}" [hidden]="!fullname?.errors?.['required']">
+                    Your name is required
+                  </div>
+            </div>
+
+            <input class="contactform" [ngStyle]="{'height':'50px'}" type="email" id="email" name="email" formControlName="email" placeholder="Your email">
+            <div *ngIf="!email?.valid && email?.touched">
+                <div [ngStyle]="{'color': 'red'}" [hidden]="!email?.errors?.['required']">
+                    Your email is required
+                </div>
+                <div [ngStyle]="{'color': 'red'}" [hidden]="!email?.errors?.['email']">
+                    Your email adress is invalid
+                </div>
+            </div>
+
+            <textarea class="contactform"[ngStyle]="{'height':'202px'}" type="text" id="message" name="message" formControlName="message" placeholder="Your message"></textarea>
+            <div *ngIf="!message?.valid && message?.touched">
+                <div [ngStyle]="{'color': 'red'}" [hidden]="!message?.errors?.['minlength']">
+                    Your message is empty
+                </div>
+            </div>
+
+            <button type="submit" [disabled]="!contactForm.valid">Submit</button>
+        </form>
+
+    </div>
+</div>

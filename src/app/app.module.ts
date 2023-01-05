@@ -11,6 +11,10 @@ import {IntroducingComponent} from './introducing/introducing.component';
 import { HeaderComponent } from './header/header.component';
 import {MatButtonModule} from '@angular/material/button';
 import { AboutmeComponent } from './aboutme/aboutme.component';
+import { MyskillsComponent } from './myskills/myskills.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
+import { ContactComponent } from './contact/contact.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,6 +23,9 @@ import { AboutmeComponent } from './aboutme/aboutme.component';
     IntroducingComponent,
     HeaderComponent,
     AboutmeComponent,
+    MyskillsComponent,
+    PortfolioComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,6 +33,8 @@ import { AboutmeComponent } from './aboutme/aboutme.component';
     MatGridListModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

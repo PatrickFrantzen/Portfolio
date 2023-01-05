@@ -1,0 +1,20 @@
+<div class="myskills">
+
+    <div class="skills">
+        <div class="skill" *ngFor="let skill of skills; let i = index">
+            <img src="./assets/img/icons_desktop/{{ skill }}">
+            <span>{{ skillname[i] }}</span>
+        </div>
+    </div>
+
+    <div class="myskills-text">
+        <span class="f-size-90">My Skills</span>
+        <span>I have gained experience in building projects with various front-end technologies and concepts</span>
+        <button mat-raised-button>Get in touch</button>
+        <hr class="line">
+    </div>
+</div>
+
+<div class="shadow-container">
+    <img class="green-shadow" src="./assets/img/shadows/Green shadow 3_skills_portfolio section.png">
+</div>

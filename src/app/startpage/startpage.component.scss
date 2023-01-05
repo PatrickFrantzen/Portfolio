@@ -3,7 +3,8 @@
     width: 100vw;
     max-width: 100%;
     background-color: #141D2F;
-    p {
+    margin-bottom: 150px;
+        p {
         margin:0,
     }
 }
@@ -24,17 +25,20 @@
 }
 
 .text {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
 
     button {
+        position: absolute;
+        top: 200px;
         padding: 25px 30px 25px 30px;
         background-color: #70E61C;
         color: white;
         font-weight: 400;
         font-size: 20px;
-        z-index: 0;
+        z-index: 1;
 
         &:hover {
             width: 175px;
@@ -68,10 +72,11 @@
 .social-media {
     width: 100%;
     position: absolute;
-    bottom: 15px;
+    bottom: 0px;
     display: flex;
     z-index: 1;
     justify-content: space-between;
+    margin-top: 100px;
 
     .social-media-left {
         display: flex;
@@ -91,15 +96,23 @@
     }
 
     .line {
-        border: 1px solid #9747FF;
+        border: 2px solid #9747FF;
         height: 1px;
         width: 100px;
         background-color: #9747FF;
+        border-radius: 10px;
     }
 
     p {
         text-align: center;
     }
+}
+
+.vector {
+    height: 1000px;
+    width: 100%;
+    position: absolute;
+    top: 480px;
 }
 
 
