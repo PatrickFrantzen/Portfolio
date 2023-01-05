@@ -30,12 +30,39 @@
         position: relative;
         display: flex;
         justify-content: center;
-        align-items: flex-start;
+        align-items: center;
         flex-direction: column;
         box-sizing: border-box;
-        padding: 15px 25px;
+        padding-right: 25px;
+        padding-left: 25px;
+        padding-bottom: 15px;
         gap: 10px;
+
+        .message-area {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
         
+        button {
+            width: 241px;
+            height: 58px;
+            padding: 15px 30px;
+            gap: 10px;
+            background-color: #70E61C;
+            box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+            color: white;
+            font-size: 23px;
+            margin-top: 25px;
+
+            &:hover {
+                background-color: #9747FF;
+                cursor: pointer;
+                height: 65px;
+                width: 260px;
+            }
+        }
     }
 }
 
@@ -46,8 +73,11 @@
     border-radius: 10px;
     padding-left: 15px;
     font-family: 'poppins';
-    
     color: white;
+
+    &:hover {
+        border: 1px solid #70E61C;
+    }
 }
 
 textarea {
@@ -58,3 +88,40 @@ textarea {
     color: white;
     opacity: 1;
 }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:active
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus
+select:-webkit-autofill:active {
+    background-color: #141D2F !important;
+    -webkit-box-shadow: 0 0 0px 1000px #141D2F inset;
+    -webkit-text-fill-color: white !important;
+}
+
+.image-position {
+    position: absolute;
+    top: 13px;
+    right: 15px;
+}
+
+.red-border {
+    border-color: red;
+}
+
+.green-border {
+    border-color: #70E61C;
+}
+
+.disabled-btn {
+    opacity: 0.5;
+    pointer-events: none;
+}
+

@@ -33,7 +33,7 @@ get email() {
 }
 
 get message() {
-  return this.contactForm.get('mesage');
+  return this.contactForm.get('message');
   
 }
 
