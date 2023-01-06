@@ -1,14 +1,14 @@
-<div class="portfolio-head" id="portfolio">
+<div class="portfolio-head" >
     <div class="line short"></div>
     <h1>Portfolio</h1>
     <div class="line long"></div> 
 </div>
 
-<div class="portfolio-text">
+<div class="portfolio-text" id="portfolio">
     <span>This page is a sample of my work - please feel free to try them out</span>
 </div>
 
-<div class="project-area">
+<div class="project-area" >
     <div class="project" *ngFor="let projectname of projectnames; let i = index">
         <ng-template [ngIf]="i % 2 == 0" [ngIfElse]="odd">
             <img [ngStyle]="{'margin-right': '150px'}" src="./assets/img/portfolio/{{ projectimages[i] }}">

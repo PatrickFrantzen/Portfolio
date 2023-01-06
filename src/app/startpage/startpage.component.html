@@ -20,10 +20,10 @@
     <div class="social-media">
         <div class="social-media-left">
             <hr class="line">
-            <img [ngStyle]="{'margin-left': '50px'}" src="/assets/img/social_buttons/github_default.png">
-            <img [ngStyle]="{'margin-left': '50px'}" src="/assets/img/social_buttons/linkedin_default.png">
-            <img [ngStyle]="{'margin-left': '50px'}" src="/assets/img/social_buttons/email_default.png">
-            <p [ngStyle]="{'margin-left': '50px', 'font-size': '23px'}">patrickfrantzen@web.de</p>
+            <img [ngStyle]="{'margin-left': '50px'}" src="/assets/img/social_buttons/github_default.png" (click)="visit('https://github.com/PatrickFrantzen')">
+            <a href="#contact"><img [ngStyle]="{'margin-left': '50px'}" src="/assets/img/social_buttons/email_default.png"></a>
+            <img [ngStyle]="{'margin-left': '50px'}" src="/assets/img/social_buttons/linkedin_default.png" (click)="visit('https://github.com/PatrickFrantzen')">
+            <a href="#contact"><p [ngStyle]="{'margin-left': '50px', 'font-size': '23px'}">patrickfrantzen@web.de</p></a>
         </div>
 
         <div class="social-media-right">

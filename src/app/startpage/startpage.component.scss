@@ -39,10 +39,12 @@
         font-weight: 400;
         font-size: 20px;
         z-index: 1;
+        border-radius: 10px;
+        transition-duration: 0.3s;
+        transition-property: transform;
 
         &:hover {
-            width: 175px;
-            height: 65px;
+            transform: scale(1.2);
             background-color: #9747FF;
         }
     }
@@ -81,6 +83,15 @@
     .social-media-left {
         display: flex;
         align-items: center;
+
+        img {
+            cursor: pointer;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
     }
 
     .social-media-right {

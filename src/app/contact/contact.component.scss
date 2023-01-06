@@ -57,12 +57,13 @@
             color: white;
             font-size: 23px;
             margin-top: 25px;
+            transition-duration: 0.3s;
+            transition-property: transform;
 
             &:hover {
                 background-color: #9747FF;
                 cursor: pointer;
-                height: 65px;
-                width: 260px;
+                transform: scale(1.2);
             }
         }
     }

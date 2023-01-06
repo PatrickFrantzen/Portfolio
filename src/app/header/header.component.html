@@ -1,10 +1,21 @@
 <div class="header">
     <div class="head-container">
-        <img [ngStyle]="{'margin-left': '100px'}" src="./assets/img/logo/logo.png">
-        <div>
-            <a href="#aboutme" [ngStyle]="{'margin-right': '50px'}">About me</a>
-            <a href="#skills" [ngStyle]="{'margin-right': '50px'}">Skills</a>
-            <a href="#portfolio" [ngStyle]="{'margin-right': '100px'}">Portfolio</a>
+        <a routerLink="/"><img [ngStyle]="{'margin-left': '100px'}" src="./assets/img/logo/logo.png"></a>
+        <div class="link-container">
+            <div >
+                <a [ngStyle]="{'margin-right': '50px'}" [ngClass]="{'green': aboutHeadClicked}" (click)="scroll('aboutme')" (click)="(setUnderline('about-head'))">About me</a>
+                <div [ngClass]="{'underline': aboutHeadClicked}"></div>
+            </div>
+            <div>
+                <a [ngStyle]="{'margin-right': '50px'}" [ngClass]="{'green': skillClicked}" (click)="scroll('skills')" (click)="(setUnderline('skill-head'))">Skills</a>
+                <div [ngClass]="{'underline': skillClicked}"></div>
+            </div>
+            
+            <div>
+                <a [ngStyle]="{'margin-right': '100px'}" [ngClass]="{'green': portfolioClicked}" (click)="scroll('portfolio')" (click)="(setUnderline('pf-head'))">Portfolio</a>
+                <div [ngClass]="{'underline': portfolioClicked}"></div>
+            </div>
+            
         </div>
     </div>
 

@@ -2,16 +2,16 @@
     <div class="footer-area">
 
         <div class="logo-area">
-            <img src="./assets/img/logo/logo.png">
-            <p>Impressum</p>
+            <a routerLink="/"><img src="./assets/img/logo/logo.png"></a>
+            <a class="footer-impressum" routerLink="/imprint">Impressum</a>
         </div>
 
         <span>&#169; Patrick Frantzen 2023</span>
 
         <div class="social-area">
-            <img src="./assets/img/social_buttons/github_default.png">
-            <img src="./assets/img/social_buttons/email_default.png">
-            <img src="./assets/img/social_buttons/linkedin_default.png">
+            <img src="./assets/img/social_buttons/github_default.png" (click)="visit('https://github.com/PatrickFrantzen')">
+            <a href="#contact"><img src="/assets/img/social_buttons/email_default.png"></a>
+            <img src="./assets/img/social_buttons/linkedin_default.png" (click)="visit('https://github.com/PatrickFrantzen')">
         </div>
 
     </div>

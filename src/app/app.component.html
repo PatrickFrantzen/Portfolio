@@ -1,7 +1,12 @@
 <app-header></app-header>
-<router-outlet></router-outlet>
-<app-aboutme></app-aboutme>
-<app-myskills></app-myskills>
-<app-portfolio></app-portfolio>
-<app-contact></app-contact>
+<div [ngClass]="{'hidden': router.url == '/imprint'}">
+    <router-outlet></router-outlet>
+    <app-aboutme></app-aboutme>
+    <app-myskills></app-myskills>
+    <app-portfolio></app-portfolio>
+    <app-contact></app-contact>
+</div>
+<div [ngClass]="{'hidden': router.url !== '/imprint'}">
+    <app-imprint></app-imprint>
+</div>
 <app-footer></app-footer>
