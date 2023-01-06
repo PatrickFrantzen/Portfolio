@@ -1,0 +1,45 @@
+.footer {
+    position: relative;;
+    height: 291px;
+    background-color: #141D2F;
+    border-top: 4px solid #70E61C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .footer-area {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center; 
+        margin-left: 100px;
+        margin-right: 100px;
+
+        .logo-area{
+            display: flex;
+            flex-direction: column;
+
+            p{
+                padding-left: 8px;
+
+                &:hover {
+                    text-decoration: underline;
+                    text-decoration-color: #70E61C;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        span {
+            font-size: 23px;
+        }
+
+        .social-area {
+            img {
+                margin-left: 50px;
+            }
+        }
+    }
+}

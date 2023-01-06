@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { EmailValidator, NgForm, Validators, FormGroup, FormControl } from '@angular/forms';
 import { FormBuilder } from '@angular/forms';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -9,13 +9,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
-
-  /*fullName:string ='';
-  email:string = '';
-  message:string = '';*/
+  @ViewChild('myForm') myForm!: ElementRef;
+  @ViewChild('myForm') nameField!: ElementRef;
+  @ViewChild('myForm') emailField!: ElementRef;
+  @ViewChild('myForm') massageField!: ElementRef;
+  @ViewChild('myForm') buttonField!: ElementRef;
   contactForm;
 
 constructor(private formBuilder: FormBuilder) {
+
 
   this.contactForm = this.formBuilder.group( {
     fullname: ['', [Validators.required]],
@@ -34,16 +36,51 @@ get email() {
 
 get message() {
   return this.contactForm.get('message');
+}
+
+sendMail() {
+  let nameField = this.nameField.nativeElement[0];
+  let emailField = this.emailField.nativeElement[1];
+  let massageField = this.massageField.nativeElement[2];
+  let buttonField = this.buttonField.nativeElement[3];
+
+  this.disableFields(nameField, emailField, massageField, buttonField);
   
+  this.createMail(nameField, emailField, massageField)
+    
+  this.ableFields(nameField, emailField, massageField, buttonField)
+
+  this.contactForm.reset();
 }
 
-  /*onSubmit(form: NgForm) {
-    console.log('Your form Data :', form.value);
-    form.reset();
-  }*/
+disableFields(nF: any, eF:any, mF:any, bF:any) {
+  nF.disabled = true;
+  eF.disabled = true;
+  mF.disabled = true;
+  bF.disabled = true;
+}
 
-  onSubmit() {
-    console.log(this.contactForm.value);
-    this.contactForm.reset();
+ableFields(nF:any, eF:any, mF:any, bF:any) {
+  nF.disabled = false;
+  eF.disabled = false;
+  mF.disabled = false;
+  bF.disabled = false;
+}
+
+async createMail(nF: any, eF: any, mF: any) {
+  let formData = new FormData();
+  formData.append('name', nF.value);
+  formData.append('email', eF.value);
+  formData.append('message', mF.value);
+
+  await fetch('https://patrick-frantzen.developerakademie.net/Email/send_mail.php', 
+  {
+    method: 'POST',
+    body: formData,
   }
+  );
 }
+
+}
+
+

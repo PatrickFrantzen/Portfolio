@@ -1,11 +1,11 @@
 <div class="contact-head">
     <div class="line"></div>
-    <span class="f-size-90">Contact</span>
+    <span [ngStyle]="{'font-size': '90px','font-weight': '700'}">Contact</span>
 </div>
 
 <div class="contact-area">
     <div class="contact-text">
-        <span [ngStyle]="{'font-size': '32px', 'margin-bottom': '25px'}">Got a problem to solve?</span>
+        <span [ngStyle]="{'font-size': '32px','font-weight': '700', 'margin-bottom': '25px'}">Got a problem to solve?</span>
         <span [ngStyle]="{'margin-bottom': '25px'}"> Contact me through this form, I am interested in hearing you,
             knowing your ideas and contributing to you
             projects with my work.</span>
@@ -14,18 +14,22 @@
 
 
     <div>
-        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+        <form [formGroup]="contactForm" (ngSubmit)="sendMail()" novalidate #myForm>
             <!--Inputfield for Name -->
             <div [ngStyle]="{'position': 'relative'}">
-                <input class="contactform" [ngClass]="{'red-border' : !fullname?.valid && fullname?.touched, 'green-border': fullname?.valid}" [ngStyle]="{'height':'50px'}" type="text" id="fullname" name="fullname"
-                formControlName="fullname" placeholder="Your name">
+                <input class="contactform"
+                    [ngClass]="{'red-border' : !fullname?.valid && fullname?.touched, 'green-border': fullname?.valid}"
+                    [ngStyle]="{'height':'50px'}" type="text" id="fullname" name="fullname" formControlName="fullname"
+                    placeholder="Your name" #nameField>
 
                 <div *ngIf="!fullname?.valid && fullname?.touched">
-                    <img class="image-position" src="./assets/img/icons_desktop/alert.png" [hidden]="!fullname?.errors?.['valid'] && fullname?.errors?.['touched']">
+                    <img class="image-position" src="./assets/img/icons_desktop/alert.png"
+                        [hidden]="!fullname?.errors?.['valid'] && fullname?.errors?.['touched']">
                 </div>
 
                 <div *ngIf="fullname?.valid && fullname?.touched">
-                    <img class="image-position" src="./assets/img/icons_desktop/success.png" [hidden]="fullname?.errors?.['valid'] && fullname?.errors?.['touched']">
+                    <img class="image-position" src="./assets/img/icons_desktop/success.png"
+                        [hidden]="fullname?.errors?.['valid'] && fullname?.errors?.['touched']">
                 </div>
             </div>
             <div *ngIf="!fullname?.valid && fullname?.touched">
@@ -36,15 +40,19 @@
 
             <!--Inputfield for Email adress -->
             <div [ngStyle]="{'position': 'relative'}">
-                <input class="contactform" [ngClass]="{'red-border' : !email?.valid && email?.touched, 'green-border': email?.valid}" [ngStyle]="{'height':'50px'}" type="email" id="email" name="email"
-                formControlName="email" placeholder="Your email">
+                <input class="contactform"
+                    [ngClass]="{'red-border' : !email?.valid && email?.touched, 'green-border': email?.valid}"
+                    [ngStyle]="{'height':'50px'}" type="email" id="email" name="email" formControlName="email"
+                    placeholder="Your email" #emailField>
 
                 <div *ngIf="!email?.valid && email?.touched">
-                    <img class="image-position"  src="./assets/img/icons_desktop/alert.png" [hidden]="!email?.errors?.['valid'] && email?.errors?.['touched']">
+                    <img class="image-position" src="./assets/img/icons_desktop/alert.png"
+                        [hidden]="!email?.errors?.['valid'] && email?.errors?.['touched']">
                 </div>
-                
+
                 <div *ngIf="email?.valid && email?.touched">
-                    <img class="image-position"  src="./assets/img/icons_desktop/success.png" [hidden]="email?.errors?.['valid'] && email?.errors?.['touched']">
+                    <img class="image-position" src="./assets/img/icons_desktop/success.png"
+                        [hidden]="email?.errors?.['valid'] && email?.errors?.['touched']">
                 </div>
             </div>
 
@@ -60,34 +68,43 @@
             <!--Inputfield for message -->
             <div class="message-area">
                 <div [ngStyle]="{'position': 'relative', 'display': 'flex', 'flex-direction': 'column'}">
-                    <textarea class="contactform" [ngClass]="{'red-border' : !message?.valid && message?.touched, 'green-border': message?.valid}" [ngStyle]="{'height':'202px'}" type="text" id="message" name="message"
-                    formControlName="message" placeholder="Your message"></textarea>
-    
+                    <textarea class="contactform"
+                        [ngClass]="{'red-border' : !message?.valid && message?.touched, 'green-border': message?.valid}"
+                        [ngStyle]="{'height':'202px'}" type="text" id="message" name="message" formControlName="message"
+                        placeholder="Your message" #messageField></textarea>
+
                     <div *ngIf="!message?.valid && message?.touched">
-                        <img class="image-position"  src="./assets/img/icons_desktop/alert.png" [hidden]="!message?.errors?.['valid'] && message?.errors?.['touched']"> 
+                        <img class="image-position" src="./assets/img/icons_desktop/alert.png"
+                            [hidden]="!message?.errors?.['valid'] && message?.errors?.['touched']">
                     </div>
-                    
+
                     <div *ngIf="message?.valid && message?.touched">
-                        <img class="image-position"  src="./assets/img/icons_desktop/success.png" [hidden]="message?.errors?.['valid'] && message?.errors?.['touched']"> 
+                        <img class="image-position" src="./assets/img/icons_desktop/success.png"
+                            [hidden]="message?.errors?.['valid'] && message?.errors?.['touched']">
                     </div>
-    
-                    
                 </div>
-    
+
                 <div *ngIf="!message?.valid && message?.touched">
                     <div [ngStyle]="{'color': 'red'}" [hidden]="!message?.errors?.['required']">
                         Your message is empty
                     </div>
                 </div>
 
-                <button type="submit" [ngClass]="{'disabled-btn': !contactForm.valid}" [disabled]="!contactForm.valid">Send message :)</button>
+                <button type="submit" [ngClass]="{'disabled-btn': !contactForm.valid}" [disabled]="!contactForm.valid"
+                    #buttonField>Send message :) </button>
             </div>
-
-
-            
-
-
         </form>
-
     </div>
+</div>
+
+<div class="arrow-position">
+    <a class="arrow-container" href="#">
+        <img src="./assets/img/goUp/goUp.png">
+        <img src="./assets/img/goUp/goUp_hover.png">
+    </a>
+</div>
+
+
+<div class="purple-shadow-container">
+    <img class="purple-shadow" src="./assets/img/shadows/Purple shadow_portfolio_footer section.png">
 </div>
