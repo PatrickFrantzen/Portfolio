@@ -44,15 +44,18 @@ body {
     background-color: #141D2F;
 }
 
-.f-size-58 {
-    font-size: 58px;
+::-webkit-scrollbar {
+  width: 0px;
 }
 
-.f-size-64 {
-    font-size: 64px;
+::-webkit-scrollbar {
+  background-color: #141D2F;
 }
 
-.f-size-90 {
-    font-size: 90px;
+::-webkit-scrollbar-track {
+  background: #141D2F;
 }
 
+::-webkit-scrollbar-thumb {
+  background: #141D2F;
+}

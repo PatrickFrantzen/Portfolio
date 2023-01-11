@@ -3,6 +3,10 @@
     top: 750px;
     right: 0;
     overflow: hidden;
+
+    @media screen and (max-width:1024px) {
+        width: 100%;
+    }
 }
 
 .purple-shadow {
@@ -16,14 +20,44 @@
     margin-left: 100px;
     margin-bottom: 200px;
 
+    @media screen and (max-width:1300px) {
+        margin-bottom: 100px;
+    }
+
+    @media screen and (max-width:1024px) {
+        margin-right: 100px;
+        justify-content: center;
+    }
+
+    @media screen and (max-width:720px) {
+        margin-right: 25px;
+        margin-left: 25px
+    }
+
     .aboutme-text {
         z-index: 1;
         width: 50%;
+
+        @media screen and (max-width:1024px) {
+            width: 100%;
+        }
 
         h1 {
             font-size: 90px;
             font-weight: 700;
             margin-bottom: 50px;
+
+            @media screen and (max-width:500px) {
+                font-size: 82px;
+            }
+
+            @media screen and (max-width:400px) {
+                font-size: 65px;
+            }
+
+            @media screen and (max-width:350px) {
+                font-size: 50px;
+            }
         }
     }
 }
@@ -57,6 +91,14 @@
     justify-content: center;
     align-items: center;
     margin-left: 200px;
+
+    @media screen and (max-width:1300px) {
+        margin-left: 75px;
+    }
+
+    @media screen and (max-width:1024px) {
+        display: none;
+    }
 
     img {
         height: 450px;

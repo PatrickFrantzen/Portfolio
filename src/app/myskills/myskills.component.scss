@@ -1,22 +1,52 @@
 .myskills {
+    position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    margin-top: 300px;
+    margin-top: 150px;
     margin-left: 25px;
-    margin-right: 100px;
-    margin-bottom: 300px;
+    margin-bottom: 200px;
+    z-index: 1;
 
-    h1 {
-        font-size: 90px
+    @media screen and (max-width:1400px) {
+        margin-top: 150px;
     }
 
+    @media screen and (max-width:1024px) {
+        flex-direction: column-reverse;
+        margin-left: 100px;
+    }
+
+    @media screen and (max-width:768px) {
+        margin-left: unset;
+    }
+
+    h1 {
+        font-size: 90px;
+
+
+    }
+
+
+
     .skills {
-        width: 55%;
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
+
+        @media screen and (max-width:1400px) {
+            width: 77%;
+        }
+
+        @media screen and (max-width:1024px) {
+            width: 100%;
+        }
+
+        @media screen and (max-width:720px) {
+            justify-content: space-evenly;
+        }
 
         .skill {
             width: 75px;
@@ -29,62 +59,133 @@
             margin-right: 75px;
             margin-top: 25px;
             margin-bottom: 25px;
+
+        @media screen and (max-width:450px) {
+            margin-left: 25px;
+            margin-right: 25px;
+        }
         }
     }
 
-    .myskills-text {
-        position: relative;
-        width: 45%;
+    .my-skills-textarea {
         display: flex;
-        justify-content: center;
-        align-items: center;
         flex-direction: column;
+        align-items: center;
 
-        span {
-            margin-bottom: 50px;
+        @media screen and (max-width:1024px) {
+            width: 100%;
         }
+    }
 
-        button {
-            position: absolute;
-            top: 125px;
-            padding: 25px 30px 25px 30px;
-            background-color: #70E61C;
-            color: white;
-            font-weight: 400;
-            font-size: 20px;
-            z-index: 1;
-            border-radius: 10px;
-            transition-duration: 0.3s;
-            transition-property: transform;
-    
-            &:hover {
-                transform: scale(1.2);
-                background-color: #9747FF;
+    .my-skills-head {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        padding-bottom: 50px;
+        width: 100%;
+
+
+
+
+        .my-skills {
+            font-size: 90px;
+            font-weight: 700;
+
+            @media screen and (max-width:1450px) {
+                font-size: 75px;
+            }
+
+            @media screen and (max-width:500px) {
+                font-size: 70px;
+            }
+
+            @media screen and (max-width:400px) {
+                font-size: 60px;
+            }
+
+            @media screen and (max-width:350px) {
+                font-size: 50px;
             }
         }
 
         .line {
-            position: absolute;
-            top: 0;
-            right: -100px;
             border: 2px solid #9747FF;
             height: 1px;
-            width: 100px;
+            width: 75px;
             background-color: #9747FF;
             border-radius: 10px;
+            margin-left: 25px;
+
+            @media screen and (max-width:1024px) {
+                right: -320px;
+            }
+
+            @media screen and (max-width:350px) {
+                width: 50px;
+            }
         }
+    }
+
+    button {
+        width: 200px;
+        height: 58px;
+        padding: 25px 30px 25px 30px;
+        background-color: #70E61C;
+        color: white;
+        font-weight: 400;
+        font-size: 20px;
+        z-index: 1;
+        border-radius: 10px;
+        transition-duration: 0.3s;
+        transition-property: transform;
+
+        &:hover {
+            transform: scale(1.2);
+            background-color: #9747FF;
+        }
+    }
+
+    .myskills-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: right;
+        margin-left: 100px;
+
+        @media screen and (max-width:720px) {
+            margin-left: 25px
+        }
+
+        span {
+            text-align: right;
+            margin-right: 100px;
+            margin-bottom: 50px;
+        }
+
+
+
+
     }
 }
 
 .shadow-container {
     position: absolute;
-    top: 1850px;
+    top: 2050px;
     overflow: hidden;
+
+    @media screen and (max-width:1300px) {
+        top: 2150px;
+    }
+
+    @media screen and (max-width:1024px) {
+        width: 100%;
+    }
 }
 
 .green-shadow {
     position: relative;
-    transform:scaleY(-1) ;
+    transform: scaleY(-1);
     left: -60%;
     overflow: hidden;
 }

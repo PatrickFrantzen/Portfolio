@@ -1,4 +1,4 @@
-<div class="myskills" id="skills">
+<div class="myskills" >
 
     <div class="skills">
         <div class="skill" *ngFor="let skill of skills; let i = index">
@@ -7,12 +7,21 @@
         </div>
     </div>
 
-    <div class="myskills-text">
-        <span [ngStyle]="{'font-size': '90px', 'font-weight': '700'}">My Skills</span>
-        <span>I have gained experience in building projects with various front-end technologies and concepts</span>
-        <button mat-raised-button>Get in touch</button>
-        <hr class="line">
+
+    <div class="my-skills-textarea">
+        <div class="my-skills-head" id="skills">
+            <span class="my-skills">My Skills</span>
+            <div class="line"></div>
+        </div>
+    
+        <div class="myskills-text">
+            <span>I have gained experience in building projects with various front-end technologies and concepts</span>
+            
+        </div>
+
+        <button mat-raised-button (click)="scroll('contact')">Get in touch</button>
     </div>
+
 </div>
 
 <div class="shadow-container">

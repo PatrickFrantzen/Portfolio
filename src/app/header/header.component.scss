@@ -15,6 +15,7 @@
         text-decoration: none;
         color: white;
         font-size: 23px;
+        cursor: pointer;
 
         &:hover {
             color: #70E61C;
@@ -29,10 +30,29 @@
     width: 100%;
     margin-top: 50px;
     margin-bottom: 50px;
+    margin-right: 100px;
+    margin-left: 100px;
+
+    @media screen and (max-width:720px) {
+        margin-right: 25px;
+        margin-left: 25px
+    }
+
+    .menu {
+        display: none;
+
+        @media screen and (max-width:768px) {
+            display: flex;
+        }
+    }
 }
 
 .link-container {
     display: flex;
+
+    @media screen and (max-width:768px) {
+        display: none;
+    }
 }
 
 .underline {
@@ -45,4 +65,57 @@
 
 .green {
     color: #70E61C !important;
+}
+
+.head-display {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 100vh;
+    background-color: #141d2f88;
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 0.5s;
+
+    .display-logo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-top: 20px;
+        margin-bottom: 50px;
+
+        @media screen and (max-width:720px) {
+            margin-right: 25px;
+            margin-left: 25px
+        }
+    }
+
+    .display-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        margin-top: 150px;
+
+        div {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        width: 0vw;
+    }
+
+    to {
+        width: 100vw;
+    }
+    
 }

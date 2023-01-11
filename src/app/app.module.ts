@@ -7,7 +7,6 @@ import { StartpageComponent } from './startpage/startpage.component';
 
 import {MatGridListModule} from '@angular/material/grid-list';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {IntroducingComponent} from './introducing/introducing.component';
 import { HeaderComponent } from './header/header.component';
 import {MatButtonModule} from '@angular/material/button';
 import { AboutmeComponent } from './aboutme/aboutme.component';
@@ -22,7 +21,6 @@ import { ImprintComponent } from './imprint/imprint.component';
   declarations: [
     AppComponent,
     StartpageComponent,
-    IntroducingComponent,
     HeaderComponent,
     AboutmeComponent,
     MyskillsComponent,
@@ -40,7 +38,7 @@ import { ImprintComponent } from './imprint/imprint.component';
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [HeaderComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

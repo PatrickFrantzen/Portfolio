@@ -10,30 +10,34 @@
 
 <div class="project-area" >
     <div class="project" *ngFor="let projectname of projectnames; let i = index">
-        <ng-template [ngIf]="i % 2 == 0" [ngIfElse]="odd">
-            <img [ngStyle]="{'margin-right': '150px'}" src="./assets/img/portfolio/{{ projectimages[i] }}">
-            <div [ngStyle]="{'align-items': 'flex-start'}" class="project-details">
-                <span [ngStyle]="{'font-size': '32px', 'color': '#9747FF', 'font-weight': '700', 'margin-bottom': '30px'}">{{ projectnames[i] }}</span>
-                <span [ngStyle]="{'font-size': '23px', 'color': '#70E61C', 'margin-bottom': '20px'}">{{ methods[i] }}</span>
-                <span [ngStyle]="{'margin-bottom': '20px'}">{{ descriptions[i] }}</span>
-                <div>
-                    <button mat-raised-button class="btn live" (click)="visitProject(livetests[i])">Live test</button>
-                    <button mat-raised-button class="btn git" (click)="visitProject(github[i])">Github</button>
+        <ng-template [ngIf]="i % 2 == 0" [ngIfElse]="odd" class="column">
+            
+                <img [ngStyle]="{'margin-right': '150px'}" src="./assets/img/portfolio/{{ projectimages[i] }}">
+                <div [ngStyle]="{'align-items': 'flex-start'}" class="project-details">
+                    <span [ngStyle]="{'font-size': '32px', 'color': '#9747FF', 'font-weight': '700', 'margin-bottom': '30px'}">{{ projectnames[i] }}</span>
+                    <span [ngStyle]="{'font-size': '23px', 'color': '#70E61C', 'margin-bottom': '20px'}">{{ methods[i] }}</span>
+                    <span [ngStyle]="{'margin-bottom': '20px'}">{{ descriptions[i] }}</span>
+                    <div>
+                        <button mat-raised-button class="btn live" (click)="visitProject(livetests[i])">Live test</button>
+                        <button mat-raised-button class="btn git" (click)="visitProject(github[i])">Github</button>
+                    </div>
                 </div>
-            </div>
+        
         </ng-template>
 
-        <ng-template #odd>
-            <div [ngStyle]="{'align-items': 'flex-end'}" class="project-details">
-                <span [ngStyle]="{'font-size': '32px', 'color': '#9747FF', 'font-weight': '700', 'margin-bottom': '30px'}">{{ projectnames[i] }}</span>
-                <span [ngStyle]="{'font-size': '23px', 'color': '#70E61C', 'margin-bottom': '20px'}">{{ methods[i] }}</span>
-                <span [ngStyle]="{'margin-bottom': '20px', 'text-align': 'end'}">{{ descriptions[i] }}</span>
-                <div>
-                    <button mat-raised-button class="btn live" (click)="visitProject(livetests[i])">Live test</button>
-                    <button mat-raised-button class="btn git" (click)="visitProject(github[i])">Github</button>
+        <ng-template #odd >
+            <div class="column-reverse">
+                <div [ngStyle]="{'align-items': 'flex-end'}" class="project-details">
+                    <span [ngStyle]="{'font-size': '32px', 'color': '#9747FF', 'font-weight': '700', 'margin-bottom': '30px'}">{{ projectnames[i] }}</span>
+                    <span [ngStyle]="{'font-size': '23px', 'color': '#70E61C', 'margin-bottom': '20px'}">{{ methods[i] }}</span>
+                    <span [ngStyle]="{'margin-bottom': '20px', 'text-align': 'right'}">{{ descriptions[i] }}</span>
+                    <div>
+                        <button mat-raised-button class="btn live" (click)="visitProject(livetests[i])">Live test</button>
+                        <button mat-raised-button class="btn git" (click)="visitProject(github[i])">Github</button>
+                    </div>
                 </div>
+                <img [ngStyle]="{'margin-left': '150px'}" src="./assets/img/portfolio/{{ projectimages[i] }}">
             </div>
-            <img [ngStyle]="{'margin-left': '150px'}" src="./assets/img/portfolio/{{ projectimages[i] }}">
         </ng-template>
     </div>
 </div>

@@ -1,8 +1,25 @@
 .contact-head {
+    position: relative;
     display: flex;
     justify-content: left;
     align-items: center;
     margin-bottom: 150px;
+    z-index: 1;
+
+    span {
+
+        @media screen and (max-width:500px) {
+            font-size: 80px !important;
+        }
+
+        @media screen and (max-width:400px) {
+            font-size: 70px !important;
+        }
+
+        @media screen and (max-width:350px) {
+            font-size: 50px !important;
+        }
+    }
 
     .line {
         border: 2px solid #9747FF;
@@ -11,6 +28,10 @@
         border-radius: 10px;
         width: 50px;
         margin-right: 50px;
+
+        @media screen and (max-width:450px) {
+            margin-right: 5px;
+        }
     }
 }
 
@@ -20,6 +41,18 @@
     margin-left: 100px;
     margin-right: 100px;
     margin-bottom: 100px;
+    z-index: 1;
+
+    @media screen and (max-width:1200px) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @media screen and (max-width:720px) {
+        margin-right: 25px;
+        margin-left: 25px
+    }
 
     .contact-text {
         display: flex;
@@ -27,6 +60,17 @@
         flex-direction: column;
         width: 600px;
         margin-right: 50px;
+        z-index: 1;
+        line-height: 1.1;
+
+        @media screen and (max-width:1200px) {
+            margin-right: unset;
+            margin-bottom: 50px;
+        }
+
+        @media screen and (max-width:600px) {
+            width: unset;
+        }
     }
 
     form {
@@ -39,13 +83,18 @@
         padding-left: 25px;
         padding-bottom: 15px;
         gap: 10px;
+        z-index: 1;
+
+        @media screen and (max-width:1200px) {
+            padding-left: unset;
+        }
 
         .message-area {
             display: flex;
             align-items: center;
             flex-direction: column;
         }
-        
+
         button {
             width: 241px;
             height: 58px;
@@ -81,6 +130,10 @@
     &:hover {
         border: 1px solid #70E61C;
     }
+
+    @media screen and (max-width:720px) {
+        width: calc(100vw - 50px);
+    }
 }
 
 textarea {
@@ -93,17 +146,15 @@ textarea {
 }
 
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
+input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active,
 textarea:-webkit-autofill,
 textarea:-webkit-autofill:hover,
 textarea:-webkit-autofill:focus,
-textarea:-webkit-autofill:active
-select:-webkit-autofill,
+textarea:-webkit-autofill:active select:-webkit-autofill,
 select:-webkit-autofill:hover,
-select:-webkit-autofill:focus
-select:-webkit-autofill:active {
+select:-webkit-autofill:focus select:-webkit-autofill:active {
     background-color: #141D2F !important;
     -webkit-box-shadow: 0 0 0px 1000px #141D2F inset;
     -webkit-text-fill-color: white !important;
@@ -130,8 +181,17 @@ select:-webkit-autofill:active {
 
 .purple-shadow-container {
     position: absolute;
-    top: 4900px;
+    top: 5000px;
     overflow: hidden;
+
+
+    @media screen and (max-width:1300px) {
+        top: 4500px;
+    }
+
+    @media screen and (max-width:1024px) {
+        width: 100%;
+    }
 }
 
 .purple-shadow {
@@ -147,10 +207,15 @@ select:-webkit-autofill:active {
     margin-right: 100px;
     margin-bottom: 100px;
 
-    .arrow-container {
-    width: 50px;
-    height: 50px;
+    @media screen and (max-width:720px) {
+        margin-right: 25px;
     }
+
+    .arrow-container {
+        width: 50px;
+        height: 50px;
+    }
+
     img:nth-child(2) {
         display: none;
     }
@@ -163,4 +228,3 @@ select:-webkit-autofill:active {
         display: flex;
     }
 }
-
