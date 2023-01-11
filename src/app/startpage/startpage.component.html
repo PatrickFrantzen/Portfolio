@@ -20,11 +20,11 @@
     <div class="social-media">
         <div class="social-media-left">
             <hr class="line">
-            <img class="m-50" src="/assets/img/social_buttons/github_default.png"
+            <img class="m-50" src="./assets/img/social_buttons/github_default.png"
                 (click)="visit('https://github.com/PatrickFrantzen')">
             <a class="m-50" href="#contact"><img
-                    src="/assets/img/social_buttons/email_default.png"></a>
-            <img class="m-50" src="/assets/img/social_buttons/linkedin_default.png"
+                    src="./assets/img/social_buttons/email_default.png"></a>
+            <img class="m-50" src="./assets/img/social_buttons/linkedin_default.png"
                 (click)="visit('https://github.com/PatrickFrantzen')">
             <a class="m-50 mobile-hide" href="#contact">
                 <p [ngStyle]="{'font-size': '23px'}">patrickfrantzen@web.de</p>
@@ -32,8 +32,8 @@
         </div>
 
         <div class="social-media-right">
-            <img src="/assets/img/goUp/arrow.png">
-            <p [ngStyle]="{'font-size': '23px'}" class="vertical">Scroll down</p>
+            <img src="./assets/img/goUp/arrow.png">
+            <p [ngStyle]="{'font-size': '23px'}" class="vertical" (click)="scroll('aboutme')">Scroll down</p>
         </div>
     </div>
     <img class="vector" src="./assets/img/vector/vector.png">

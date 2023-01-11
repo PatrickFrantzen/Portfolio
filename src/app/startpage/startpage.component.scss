@@ -300,6 +300,7 @@ button {
         flex-direction: column;
         margin-right: 100px;
         transform: rotate(180deg);
+        cursor: pointer;
 
         @media screen and (max-width:768px) {
             display: none;
@@ -330,7 +331,7 @@ button {
 .vector {
     width: 100%;
     position: absolute;
-    top: calc(100vh - 600px);
+    top: calc(100vh - 625px);
 
     @media screen and (max-width:1500px) {
         top: calc(100vh - 530px);
