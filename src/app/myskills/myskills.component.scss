@@ -3,9 +3,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 150px;
     margin-left: 25px;
-    margin-bottom: 200px;
+    margin-bottom: 150px;
     z-index: 1;
 
     @media screen and (max-width:1400px) {
@@ -21,12 +20,13 @@
         margin-left: unset;
     }
 
-    h1 {
-        font-size: 90px;
-
-
+    @media screen and (max-width: 914px) and (max-height: 768px) and (orientation: landscape) {
+        margin-left: unset;
     }
 
+    h1 {
+        font-size: 90px;
+    }
 
 
     .skills {
@@ -44,7 +44,11 @@
             width: 100%;
         }
 
-        @media screen and (max-width:720px) {
+        @media screen and (max-width:720px) and (orientation: portrait) {
+            justify-content: space-evenly;
+        }
+
+        @media screen and (max-width: 914px) and (max-height: 768px) and (orientation: landscape) {
             justify-content: space-evenly;
         }
 
@@ -60,12 +64,36 @@
             margin-top: 25px;
             margin-bottom: 25px;
 
+            img {
+                margin-bottom: 5px;
+            }
+
+            &:hover {
+                transform: scale(1.2);
+                
+                img {
+                    filter: invert(50%) sepia(71%) saturate(7142%) hue-rotate(250deg) brightness(103%) contrast(103%);
+                }
+                span {
+                    color: #70E61C;
+                    font-size: 18px;
+                }
+            }
+
         @media screen and (max-width:450px) {
             margin-left: 25px;
             margin-right: 25px;
         }
+
+        @media screen and (max-width: 914px) and (max-height: 768px) and (orientation: landscape) {
+            width: 50px;
+            margin-right: 60px;
+            margin-left: 60px;
+        }
         }
     }
+
+
 
     .my-skills-textarea {
         display: flex;
@@ -188,4 +216,12 @@
     transform: scaleY(-1);
     left: -60%;
     overflow: hidden;
+
+    @media screen and (max-width:1024px) {
+        left: -500px;
+    }
+
+    @media screen and (max-width:700px) {
+        left: -600px;
+    }
 }

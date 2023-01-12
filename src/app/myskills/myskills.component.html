@@ -1,7 +1,7 @@
-<div class="myskills" >
+<div class="myskills" id="skills">
 
-    <div class="skills">
-        <div class="skill" *ngFor="let skill of skills; let i = index">
+    <div class="skills" >
+        <div  class="skill" *ngFor="let skill of skills; let i = index">
             <img src="./assets/img/icons_desktop/{{ skill }}">
             <span>{{ skillname[i] }}</span>
         </div>
@@ -9,17 +9,17 @@
 
 
     <div class="my-skills-textarea">
-        <div class="my-skills-head" id="skills">
+        <div class="my-skills-head" >
             <span class="my-skills">My Skills</span>
             <div class="line"></div>
         </div>
     
-        <div class="myskills-text">
+        <div class="myskills-text" >
             <span>I have gained experience in building projects with various front-end technologies and concepts</span>
             
         </div>
 
-        <button mat-raised-button (click)="scroll('contact')" id="portfolio">Get in touch</button>
+        <button mat-raised-button (click)="scroll('contact')">Get in touch</button>
     </div>
 
 </div>

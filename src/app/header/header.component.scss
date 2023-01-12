@@ -21,6 +21,11 @@
             color: #70E61C;
         }
     }
+
+    @media screen and (max-width: 768px) and (max-height: 500px) {
+        height: 75px;
+        align-items: center;
+    }
 }
 
 .head-container {
@@ -38,12 +43,34 @@
         margin-left: 25px
     }
 
+    @media screen and (max-width: 914px) and (max-height: 768px) {
+        margin-right: 25px;
+        margin-left: 25px
+    }
+
+    @media screen and (max-width: 768px) and (max-height: 500px) {
+        margin-bottom: unset;
+        margin-top: unset;
+    }
+
+
+
     .menu {
         display: none;
 
         @media screen and (max-width:768px) {
             display: flex;
         }
+
+        @media screen and (max-width: 768px) and (max-height: 768px) {
+            width: 35px;
+        }
+    }
+}
+
+.logo {
+    @media screen and (max-width: 768px) and (max-height: 500px) {
+        width: 150px;
     }
 }
 
@@ -88,7 +115,17 @@
         margin-top: 20px;
         margin-bottom: 50px;
 
-        @media screen and (max-width:720px) {
+        @media screen and (max-width:720px) and (orientation: portrait) {
+            margin-right: 25px;
+            margin-left: 25px
+        }
+
+        @media screen and (max-width: 768px) and (max-height: 768px) {
+            margin-right: 25px;
+            margin-left: 25px
+        }
+
+        @media screen and (max-width: 768px) and (max-height: 500px) {
             margin-right: 25px;
             margin-left: 25px
         }
@@ -105,6 +142,10 @@
         div {
             margin-top: 15px;
             margin-bottom: 15px;
+        }
+
+        @media screen and (max-width: 768px) and (max-height: 600px) {
+            margin-top: unset;
         }
     }
 }

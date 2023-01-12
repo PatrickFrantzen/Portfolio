@@ -37,6 +37,7 @@ import { ImprintComponent } from './imprint/imprint.component';
     MatButtonModule,
     FormsModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
   ],
   providers: [HeaderComponent],
   bootstrap: [AppComponent]

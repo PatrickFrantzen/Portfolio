@@ -4,7 +4,6 @@
     justify-content: right;
     align-items: center;
     z-index: 1;
-    margin-top: 150px;
 
     @media screen and (max-width:550px) {
         justify-content: space-between;
@@ -81,11 +80,13 @@
 }
 
 .portfolio-text {
+    position: relative;
     margin-top: 50px;
     margin-bottom: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 
     @media screen and (max-width:500px) {
         margin-left: 25px;
@@ -112,6 +113,11 @@
         margin-right: 25px;
         margin-left: 25px
     }
+
+    @media screen and (max-width: 768px) and (max-height: 768px) {
+        margin-right: 25px;
+        margin-left: 25px
+    }
 }
 
 .project {
@@ -125,20 +131,21 @@
 
     img {
         width: 500px;
-        height: 500px;
 
         @media screen and (max-width:1300px) {
             width: 400px;
-            height: 400px;
         }
 
         @media screen and (max-width:1024px) {
             margin: unset !important;
         }
 
-        @media screen and (max-width:400px) {
+        @media screen and (max-width:400px) and (orientation: portrait) {
             width: 80%;
-            height: 80%;
+        }
+
+        @media screen and (max-width: 914px) and (max-height: 768px) and (orientation: landscape){
+            width: 50%
         }
     }
 
@@ -221,13 +228,31 @@
 
     @media screen and (max-width:1024px) {
         width: 100%;
+        top: 3515px;
     }
+
+    @media screen and (max-width:700px) and (orientation: portrait) {
+        top: 3900px;
+    }
+
+    @media screen and (max-width: 768px) and (max-height: 768px) {
+        top: 3400px;
+    }
+
 }
 
 .purple-shadow {
     position: relative;
     left: -100px;
     overflow: hidden;
+
+    @media screen and (max-width:1000px) {
+        left: -400px;
+    }
+
+    @media screen and (max-width:600px) {
+        left: -600px;
+    }
 }
 
 .green-shadow-container {
@@ -246,4 +271,8 @@
     right: -525px;
     overflow: hidden;
     transform: rotate(80deg);
+
+    @media screen and (max-width:600px) {
+        right: -300px;
+    }
 }

@@ -36,6 +36,9 @@ $portfolio-theme: mat.define-light-theme((
 /* You can add global styles to this file, and also import other style files */
 @import '/src/fonts.css';
 
+html {
+  scroll-padding-top: 150px;
+}
 
 body {
     margin: 0;
@@ -48,14 +51,3 @@ body {
   width: 0px;
 }
 
-::-webkit-scrollbar {
-  background-color: #141D2F;
-}
-
-::-webkit-scrollbar-track {
-  background: #141D2F;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #141D2F;
-}

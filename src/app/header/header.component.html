@@ -1,6 +1,6 @@
 <div class="header">
     <div class="head-container" *ngIf="dialogClosed">
-        <a href="#"><img src="./assets/img/logo/logo.png" (click)="setLinksToFalse()"></a>
+        <a href="#"><img class="logo" src="./assets/img/logo/logo.png" (click)="setLinksToFalse()"></a>
 
         <div class="link-container">
             <div>
@@ -26,7 +26,7 @@
 
     <div class="head-display" id="display" *ngIf="!dialogClosed">
         <div class="display-logo">
-            <a href="#"><img src="./assets/img/logo/logo.png" (click)="setLinksToFalse()"></a>
+            <a href="#"><img class="logo" src="./assets/img/logo/logo.png" (click)="setLinksToFalse()"></a>
             <img class="menu" src="./assets/img/burger_Menu/close_final.png" (click)="closeDialog()">
         </div>
 

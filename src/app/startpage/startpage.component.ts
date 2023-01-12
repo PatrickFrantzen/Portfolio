@@ -42,7 +42,7 @@ export class StartpageComponent implements OnInit{
     const area = document.getElementById(id);
     area?.scrollIntoView({
       behavior: 'smooth',
-      block: "center",
+      block: "start",
       });
   }
 }

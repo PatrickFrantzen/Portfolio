@@ -81,6 +81,14 @@ async createMail(nF: any, eF: any, mF: any) {
   );
 }
 
+public scroll(id: string) {
+  const area = document.getElementById(id);
+  area?.scrollIntoView({
+    behavior: 'smooth',
+    block: "start",
+    });
+  }
 }
+
 
 

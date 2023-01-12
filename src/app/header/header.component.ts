@@ -85,25 +85,11 @@ returnToStartpage() {
 
 scrollToArea(id:string) {
   const area = document.getElementById(id);
-  if (id == 'portfolio') {
     area?.scrollIntoView({
       behavior: 'smooth',
       block: "start",
       inline: "center"
       });
-  } else if (id == 'contact')  {
-    area?.scrollIntoView({
-      behavior: 'smooth',
-      block: "start",
-      inline: "center"
-      });
-  } else {
-    area?.scrollIntoView({
-      behavior: 'smooth',
-      block: "center",
-      inline: "center"
-      });
-  }
 }
 
 openDialog() {
