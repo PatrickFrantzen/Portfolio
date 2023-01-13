@@ -93,6 +93,11 @@
                 <button type="submit" [ngClass]="{'disabled-btn': !contactForm.valid}" [disabled]="!contactForm.valid"
                     #buttonField>Send message :) </button>
             </div>
+
+            <div class="success" *ngIf="success">
+                <span>Your Email has been sent.</span>
+            </div>
+
         </form>
     </div>
 </div>

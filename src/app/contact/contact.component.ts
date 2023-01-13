@@ -15,6 +15,7 @@ export class ContactComponent {
   @ViewChild('myForm') massageField!: ElementRef;
   @ViewChild('myForm') buttonField!: ElementRef;
   contactForm;
+  success = false;
 
 constructor(private formBuilder: FormBuilder) {
 
@@ -46,11 +47,15 @@ sendMail() {
 
   this.disableFields(nameField, emailField, massageField, buttonField);
   
-  this.createMail(nameField, emailField, massageField)
+  this.createMail(nameField, emailField, massageField);
     
-  this.ableFields(nameField, emailField, massageField, buttonField)
+  this.ableFields(nameField, emailField, massageField, buttonField);
 
   this.contactForm.reset();
+
+  setTimeout(() => {
+    this.success = false;
+  }, 10000);
 }
 
 disableFields(nF: any, eF:any, mF:any, bF:any) {
@@ -79,6 +84,9 @@ async createMail(nF: any, eF: any, mF: any) {
     body: formData,
   }
   );
+
+  this.success = true;
+
 }
 
 public scroll(id: string) {

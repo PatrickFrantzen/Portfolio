@@ -79,6 +79,7 @@
             @media screen and (max-width:330px) {
                 height: calc(100vh - 310px);
                 top: 50px;
+                left: unset;
             }
 
             @media screen and (max-width:915px) and (max-height: 600px) and (orientation: landscape){
@@ -350,9 +351,8 @@ button {
         top: unset !important;
     }
 
-    @media screen and (max-width:350px) {
-        bottom: calc(100vh - 94%);
-        top: unset;
+    @media screen and (max-width:350px) and (orientation: portrait) {
+        bottom: calc(100vh - 94%) !important ;
     }
 
     @media screen and (max-width: 915px) and (max-height: 768px) and (orientation: landscape){

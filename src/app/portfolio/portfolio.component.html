@@ -30,7 +30,7 @@
                 <div [ngStyle]="{'align-items': 'flex-end'}" class="project-details">
                     <span [ngStyle]="{'font-size': '32px', 'color': '#9747FF', 'font-weight': '700', 'margin-bottom': '30px'}">{{ projectnames[i] }}</span>
                     <span [ngStyle]="{'font-size': '23px', 'color': '#70E61C', 'margin-bottom': '20px'}">{{ methods[i] }}</span>
-                    <span [ngStyle]="{'margin-bottom': '20px', 'text-align': 'right'}">{{ descriptions[i] }}</span>
+                    <span class="description-reverse">{{ descriptions[i] }}</span>
                     <div>
                         <button mat-raised-button class="btn live" (click)="visitProject(livetests[i])">Live test</button>
                         <button mat-raised-button class="btn git" (click)="visitProject(github[i])">Github</button>
