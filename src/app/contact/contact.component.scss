@@ -183,6 +183,7 @@ select:-webkit-autofill:focus select:-webkit-autofill:active {
     position: absolute;
     top: 5000px;
     overflow: hidden;
+    user-select: none;
 
 
     @media screen and (max-width:1300px) {
@@ -209,6 +210,7 @@ select:-webkit-autofill:focus select:-webkit-autofill:active {
     left: -400px;
     overflow: hidden;
     transform: rotate(-92deg);
+    
 
     @media screen and (max-width:750px) {
         left: -550px;

@@ -236,6 +236,7 @@
     position: absolute;
     top: 3500px;
     overflow: hidden;
+    user-select: none;
 
     @media screen and (max-width:1300px) {
         top: 3200px;
@@ -275,6 +276,7 @@
     top: 4000px;
     right: 0;
     overflow: hidden;
+    user-select: none;
 
     @media screen and (max-width:1024px) {
         width: 100%;
